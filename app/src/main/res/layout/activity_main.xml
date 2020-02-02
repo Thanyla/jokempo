@@ -46,27 +46,28 @@
         <Button
             android:id="@+id/tesoura"
             style="@style/icones"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:drawableBottom="@mipmap/tesoura_40"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ic_scissors"
             android:onClick="escolha"/>
 
         <Button
             android:id="@+id/papel"
             style="@style/icones"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:drawableBottom="@mipmap/papel_48"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ic_document"
             android:onClick="escolha"/>
 
         <Button
             android:id="@+id/pedra"
             style="@style/icones"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:drawableBottom="@mipmap/rocha_40"
+            android:background="@drawable/ic_stone"
+            android:tag="@drawable/ic_stone"
             android:onClick="escolha"/>
     </LinearLayout>
 

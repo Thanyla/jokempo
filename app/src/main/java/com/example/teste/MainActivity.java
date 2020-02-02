@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void escolha(View view) {
         //preenchendo jogadores
+
         if(playerOne == null){
             this.playerOne = new Player("PLAYER 1", view.getId());
             Toast.makeText(getContext(), "Escolha computada", Toast.LENGTH_SHORT).show();
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             this.playerTwo = new Player("PLAYER 2", view.getId());
             Toast.makeText(getContext(), "Escolha computada", Toast.LENGTH_SHORT).show();
         }
+
+        //Toast.makeText(getContext(), "" + view.getBackground().toString(), Toast.LENGTH_SHORT).show();
 
         if(playerOne != null && playerTwo != null){
             Intent intent = new Intent(getContext(), ControlActivity.class);

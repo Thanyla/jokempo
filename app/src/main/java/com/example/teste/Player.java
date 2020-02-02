@@ -1,5 +1,7 @@
 package com.example.teste;
 
+import android.graphics.drawable.Drawable;
+
 import java.io.Serializable;
 
 public class Player implements Serializable {
@@ -26,4 +28,5 @@ public class Player implements Serializable {
     public void setIdEscolha(int idEscolha) {
         this.idEscolha = idEscolha;
     }
+
 }

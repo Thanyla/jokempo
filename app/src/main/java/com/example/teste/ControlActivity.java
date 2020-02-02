@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,15 @@ public class ControlActivity extends AppCompatActivity {
         Player playerTwo = (Player) extras.get("playerTwo");
         Rules rules = (Rules) extras.get("rules");
 
-        Toast.makeText(getContext(), rules.quemVence(playerOne, playerTwo).getNome(), Toast.LENGTH_SHORT).show();
+        ImageView playerOneEscolha= (ImageView) findViewById(R.id.imagePlayerOne);
+        ImageView playerTwoEscolha= (ImageView) findViewById(R.id.imagePlayerTwo);
+        //playerOneEscolha.setImageResource(R.drawable.ic_scissors);
+        playerOneEscolha.setImageResource(new Chooses().getImagem(playerOne.getIdEscolha()));
+        playerTwoEscolha.setImageResource(new Chooses().getImagem(playerTwo.getIdEscolha()));
+
+        TextView winner = (TextView) findViewById(R.id.textWinner);
+        winner.setText(rules.quemVence(playerOne, playerTwo).getNome());
+
     }
     public Context getContext(){return this;}
 

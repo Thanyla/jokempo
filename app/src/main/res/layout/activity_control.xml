@@ -9,57 +9,96 @@
 
     <TextView
         android:id="@+id/textPlayer1"
-        android:layout_width="72dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="288dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/player_one"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="106dp"
-        android:layout_height="75dp"
-        android:src="@mipmap/vs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textPlayer2"
-        app:layout_constraintStart_toEndOf="@+id/textPlayer1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageVersus"
+        app:layout_constraintEnd_toStartOf="@+id/imageVersus" />
 
     <TextView
         android:id="@+id/textPlayer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/player_two"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageVersus"
+        app:layout_constraintStart_toEndOf="@+id/imageVersus" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPlayer1"
-        app:layout_constraintVertical_bias="0.507"
-        app:srcCompat="@mipmap/winner" />
+        android:id="@+id/imagePlayerOne"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/imageVersus"
+        app:layout_constraintEnd_toEndOf="@+id/textPlayer1"
+        app:layout_constraintStart_toStartOf="@+id/textPlayer1"
+        app:layout_constraintTop_toTopOf="@+id/imageVersus"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-    <TextView
-        android:id="@+id/win"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
+    <ImageView
+        android:id="@+id/imagePlayerTwo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/imageVersus"
+        app:layout_constraintEnd_toEndOf="@+id/textPlayer2"
+        app:layout_constraintStart_toStartOf="@+id/textPlayer2"
+        app:layout_constraintTop_toTopOf="@+id/imageVersus"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/imageVersus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_war"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ganhador"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageCup"
+        app:layout_constraintEnd_toEndOf="@+id/imageCup"
+        app:layout_constraintStart_toStartOf="@+id/imageCup" />
+
+    <ImageView
+        android:id="@+id/imageCup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageVersus"
+        app:layout_constraintStart_toStartOf="@+id/imageVersus"
+        app:layout_constraintTop_toBottomOf="@+id/imageVersus"
+        app:srcCompat="@drawable/ic_cup" />
+
+    <TextView
+        android:id="@+id/textWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/player_two"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageCup"
+        app:layout_constraintStart_toStartOf="@+id/imageCup"
+        app:layout_constraintTop_toBottomOf="@+id/imageCup" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
